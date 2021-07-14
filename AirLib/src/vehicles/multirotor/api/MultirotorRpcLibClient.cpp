@@ -66,6 +66,11 @@ __pragma(warning(disable : 4239))
             pimpl_->last_future = static_cast<rpc::client*>(getClient())->async_call("takeoff", timeout_sec, vehicle_name);
             return this;
         }
+        MultirotorRpcLibClient* MultirotorRpcLibClient::followAsync(float timeout_sec, const std::string& vehicle_name)
+        {
+            pimpl_->last_future = static_cast<rpc::client*>(getClient())->async_call("follow", timeout_sec, vehicle_name);
+            return this;
+        }
         MultirotorRpcLibClient* MultirotorRpcLibClient::landAsync(float timeout_sec, const std::string& vehicle_name)
         {
             pimpl_->last_future = static_cast<rpc::client*>(getClient())->async_call("land", timeout_sec, vehicle_name);
