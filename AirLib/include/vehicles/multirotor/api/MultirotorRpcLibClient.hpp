@@ -24,6 +24,7 @@ namespace airlib
 
         MultirotorRpcLibClient* takeoffAsync(float timeout_sec = 20, const std::string& vehicle_name = "");
         MultirotorRpcLibClient* landAsync(float timeout_sec = 60, const std::string& vehicle_name = "");
+        MultirotorRpcLibClient* followAsync(float timeout_sec = 60, const std::string& vehicle_name = "");
         MultirotorRpcLibClient* goHomeAsync(float timeout_sec = Utils::max<float>(), const std::string& vehicle_name = "");
 
         MultirotorRpcLibClient* moveByVelocityBodyFrameAsync(float vx, float vy, float vz, float duration,
