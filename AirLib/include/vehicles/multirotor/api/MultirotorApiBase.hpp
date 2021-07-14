@@ -90,6 +90,7 @@ namespace airlib
         virtual bool takeoff(float timeout_sec);
         virtual bool land(float timeout_sec);
         virtual bool goHome(float timeout_sec);
+        virtual bool follow(float timeout_sec);
 
         virtual bool moveByVelocityBodyFrame(float vx, float vy, float vz, float duration, DrivetrainType drivetrain, const YawMode& yaw_mode);
         virtual bool moveByVelocityZBodyFrame(float vx, float vy, float z, float duration, DrivetrainType drivetrain, const YawMode& yaw_mode);

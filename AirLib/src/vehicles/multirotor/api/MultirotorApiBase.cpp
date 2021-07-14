@@ -49,6 +49,11 @@ namespace airlib
         return ret;
     }
 
+    bool MultirotorApiBase::follow(float timeout_sec)
+    {
+        return land(timeout_sec);
+    }
+
     bool MultirotorApiBase::land(float timeout_sec)
     {
         SingleTaskCall lock(this);
