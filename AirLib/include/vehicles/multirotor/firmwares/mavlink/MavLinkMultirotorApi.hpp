@@ -458,6 +458,11 @@ namespace airlib
             return waitForZ(timeout_sec, z, getDistanceAccuracy());
         }
 
+        virtual bool follow(float timeout_sec) override
+        {
+            return land(timeout_sec);
+        }
+
         virtual bool land(float timeout_sec) override
         {
             SingleCall lock(this);
